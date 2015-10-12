@@ -15,6 +15,7 @@ public class MyBean {
     private int privateInt;
     int defaultInt;
 
+    //기본생성자.
     public MyBean() {
     }
 }
