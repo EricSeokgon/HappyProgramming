@@ -21,6 +21,12 @@ public class MyBeanTest {
         // 인스턴스를 4개 만드는 이유는?
         // 각각의 인스턴스가 구별되어야 하기 떄문.
         // 사람에 대한 class가 있다. class는 인스턴의 틀.
+        // 그런데 난 인스턴스가 하나만 만들고 싶다.!!!(싱글턴 패턴)
+        if (bean == bean2){
+            System.out.println("yes");
+        }else{
+            System.out.println("no");
+        }
         bean.pulicInt = 100;
     }
 }

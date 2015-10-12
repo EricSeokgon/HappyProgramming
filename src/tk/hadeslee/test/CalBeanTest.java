@@ -17,6 +17,13 @@ public class CalBeanTest {
         //CalBean cal = new CalBean();
         //CalBean bean = CalBean.instance;
         CalBean bean = CalBean.getInstance();
+        CalBean bean2 = CalBean.getInstance();
+        // 같은 참조인가?
+        if (bean == bean2) {
+            System.out.println("Yes!!");
+        }
+        int value = bean.plus(5, 10);
+        System.out.println(value);
 
     }
 }
