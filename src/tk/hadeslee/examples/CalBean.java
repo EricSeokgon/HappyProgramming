@@ -10,6 +10,7 @@ package tk.hadeslee.examples;
  * To change this template use File | Settings | File Templates.
  */
 public class CalBean {
+    public int x;
     // 아래의 3가지 규칙을 지켜서 만드는 클래스는 싱글턴 패턴이 적용되었다.
 
     // 2) private 하지만 static한 필드를 선언(자기 자신을 참조하는)
@@ -19,11 +20,13 @@ public class CalBean {
 
     // 3) 2에서 선언한 instance를 반환하는 public static메소드를 만든다.
     public static CalBean getInstance() {
+        System.out.println("getInstance!!!");
         return instance;
     }
 
     // 1) private 한 생성자를 만듦. 외부에서 인스턴스를 못만들게 하겠다.
     private CalBean() {
+        System.out.println("CalBean!!!");
     }
 
     public int plus(int i, int m) {
