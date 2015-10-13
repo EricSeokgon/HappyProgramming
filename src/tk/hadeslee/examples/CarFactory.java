@@ -13,16 +13,16 @@ public class CarFactory extends AbstractFactory {
 
     @Override
     public void init() {
-
+        System.out.println("자동차 공정 초기화");
     }
 
     @Override
     public void make() {
-
+        System.out.println("자동차를 만듭니다.");
     }
 
     @Override
     public void clear() {
-
+        System.out.println("자동차 공장 청소");
     }
 }

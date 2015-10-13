@@ -13,7 +13,7 @@ package tk.hadeslee.examples;
 //추상클래스.
 //공장은 이런 기능을 가질꺼야....
 public abstract class AbstractFactory {
-    protected abstract void init();
-    protected abstract void make();
-    protected abstract void clear();
+    public abstract void init();
+    public abstract void make();
+    public abstract void clear();
 }
