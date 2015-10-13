@@ -24,9 +24,9 @@ public abstract class AbstractFactory {
     }
 
     // 추상메소드 - 구현이 안되어 있다.
-    protected abstract void init();
+    public abstract void init();
 
-    protected abstract void make();
+    public abstract void make();
 
-    protected abstract void clear();
+    public abstract void clear();
 }

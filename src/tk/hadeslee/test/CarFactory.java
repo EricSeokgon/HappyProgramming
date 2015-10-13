@@ -13,17 +13,17 @@ import tk.hadeslee.examples.AbstractFactory;
  */
 public class CarFactory extends AbstractFactory {
     @Override
-    protected void init() {
+    public void init() {
 
     }
 
     @Override
-    protected void make() {
+    public void make() {
 
     }
 
     @Override
-    protected void clear() {
+    public void clear() {
 
     }
 }
