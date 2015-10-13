@@ -14,16 +14,16 @@ import tk.hadeslee.examples.AbstractFactory;
 public class BusFactory extends AbstractFactory {
     @Override
     public void init() {
-
+        System.out.println("버스공장 초기화");
     }
 
     @Override
     public void make() {
-
+        System.out.println("버스를 만듭니다.");
     }
 
     @Override
     public void clear() {
-
+        System.out.println("버스공장 청소");
     }
 }

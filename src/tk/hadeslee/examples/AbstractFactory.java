@@ -13,7 +13,20 @@ package tk.hadeslee.examples;
 //추상클래스.
 //공장은 이런 기능을 가질꺼야....
 public abstract class AbstractFactory {
-    public abstract void init();
-    public abstract void make();
-    public abstract void clear();
+
+    //구현되어 있는 메소드도 가질 수 있다.
+    //final 메소드 - 오버라이딩을 금지.
+    public void exec() {
+        init();
+        make();
+        clear();
+
+    }
+
+    // 추상메소드 - 구현이 안되어 있다.
+    protected abstract void init();
+
+    protected abstract void make();
+
+    protected abstract void clear();
 }
