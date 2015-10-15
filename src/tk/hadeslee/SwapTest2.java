@@ -14,7 +14,10 @@ public class SwapTest2 {
         Data d = new Data();
         d.x = 5;
         d.y = 10;
-        swap(d);
+        Data d1 = d; //d가 참조하는 것을 d1도 참조한다.
+        Data d2 = new Data(d);
+        d2.y = 1000;
+        //swap(d);
         System.out.println(d.x + "," + d.y);
     }
 
@@ -28,5 +31,14 @@ public class SwapTest2 {
 class Data {
     int x;
     int y;
+
+    public Data() {
+    }
+
+    //복사 생성자.
+    public Data(Data d) {
+        this.x = d.x;
+        this.y = d.y;
+    }
 }
 
