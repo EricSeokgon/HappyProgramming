@@ -10,7 +10,22 @@ package tk.hadeslee.examples;
  * To change this template use File | Settings | File Templates.
  */
 public class Car {
-    public void run(){
+    private String name;
+
+    public void run() {
         System.out.println("전륜구동");
+    }
+
+    public Car(String name) {
+        this.name = name;
+        System.out.println("Car 생성자");
+    }
+
+    public Car() {
+    }
+
+    @Override
+    public String toString() {
+        return "자동차 입니다.";
     }
 }
