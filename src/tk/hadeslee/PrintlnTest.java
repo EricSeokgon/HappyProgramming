@@ -41,5 +41,6 @@ public class PrintlnTest {
         System.out.println(car); //Object 의 toString() 반환하는 값을 출력
         System.out.println(obj1); //Object 의 toString()이 반환하는 값을 출력
 
+        int[] intArray = new int[] {1,2,3,4,5};
     }
 }
