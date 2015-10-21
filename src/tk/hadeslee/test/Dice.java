@@ -10,10 +10,31 @@ package tk.hadeslee.test;
  * To change this template use File | Settings | File Templates.
  */
 
-//Dice라는 인터페이스가 정의되어있다.
-//Dice, 주사위인데, 어떤기능?
-public interface Dice {
-    //Dice는 점수를 반환하는 메소드를 선언하고 있다.
-    public int get();
 
+//Dice, 주사위인데, 어떤기능?
+public class Dice {
+    // 속성의 면의 수를 가지고 싶다.
+    private int faceCount;
+
+    public Dice() {//기본 생성자
+        this.faceCount = 6;
+    }
+
+    public Dice(int faceCount) throws IllegalArgumentException {
+        if (faceCount <= 1) {
+            throw new IllegalArgumentException("면의 수는 2이상이어야 합니다.");
+        }
+        this.faceCount = faceCount;
+    }
+
+    public int getFaceCount() {
+        return this.faceCount;
+    }
+
+    @Override
+    public String toString() {
+        return "Dice{" +
+                "faceCount=" + faceCount +
+                '}';
+    }
 }
