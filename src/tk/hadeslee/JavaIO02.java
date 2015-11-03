@@ -16,10 +16,13 @@ public class JavaIO02 {
         //InputStream, OutputStream은 추상 class.
         InputStream in = null;
         ByteArrayOutputStream out = null;
+        final long start = System.currentTimeMillis();
 
         try {
+
             //파일로부터 byte배열을 읽어들인 후 배열에 저장.
-            in = new FileInputStream("bytearray.dat");
+            in = new FileInputStream("./src/tk/hadeslee/JavaIO02.java");
+            //in = new FileInputStream("bytearray.dat");
             out = new ByteArrayOutputStream();
 
             int readBuffer = -1;
@@ -32,13 +35,15 @@ public class JavaIO02 {
                 System.out.println(buf[i]);
 
             }
+
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
             out.close();
             in.close();
-        }
 
+        }
+        System.out.println("총걸린 시간: "+(System.currentTimeMillis() - start));
     }
 }
 

@@ -16,12 +16,12 @@ public class JavaIO03 {
         //InputStream, OutputStream은 추상 class.
         InputStream in = null;
         OutputStream out = null;
-
+        final long start = System.currentTimeMillis();
 
         try {
-            final long start = System.currentTimeMillis();
+
             //byte[]로 읽어들여서 파일에 저장하고 싳다.
-            in = new FileInputStream("./src/tk/hadeslee/JavaIO03.java");
+            in = new FileInputStream("./src/tk/hadeslee/JavaIO02.java");
             out = new FileOutputStream("file.txt");
 
             int readCount = 0; //읽어들인 수
@@ -29,15 +29,17 @@ public class JavaIO03 {
             while ((readCount = in.read(buffer)) != -1) {
 
                 out.write(buffer, 0, readCount);//buffer의 0번째부터 읽어 들인 수 만큼만 써라.
-                System.out.println(System.currentTimeMillis() - start);
             }
+
 
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
             out.close();
             in.close();
+            System.out.println("총걸린 시간: "+(System.currentTimeMillis() - start));
         }
+
 
     }
 }
