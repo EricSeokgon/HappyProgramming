@@ -22,7 +22,7 @@ public class JavaIO01 {
 
         try {
             //byte[]로 읽어들여서 파일에 저장하고 싳다.
-            byte[] buffer = new byte[]{'1', '2', '3'};
+            byte[] buffer = new byte[]{1, 2, 3};
 
             in = new ByteArrayInputStream(buffer);
             out = new FileOutputStream("bytearray.dat");
